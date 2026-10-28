@@ -1,0 +1,270 @@
+<resources>
+    <string name="app_name">Melora</string>
+    <string name="app_subtitle">Melora Music</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_songs">Songs</string>
+    <string name="nav_albums">Albums</string>
+    <string name="nav_artists">Artists</string>
+    <string name="nav_folders">Folders</string>
+    <string name="nav_playlists">Playlists</string>
+    <string name="nav_favorites">Favorites</string>
+    <string name="favorites">Favorites</string>
+    <string name="nav_search">Search</string>
+    <string name="nav_settings">Settings</string>
+    <string name="now_playing">Now Playing</string>
+    <string name="audio_equalizer">Audio Equalizer</string>
+
+    <!-- Headers & Sections -->
+    <string name="albums_header">Albums (%1$d)</string>
+    <string name="artists_header">Artists (%1$d)</string>
+    <string name="folders_header">Folders (%1$d)</string>
+    <string name="playlists_header">Playlists (%1$d)</string>
+    <string name="favorites_header">Favorites (%1$d)</string>
+    <string name="all_songs_header">All Songs (%1$d)</string>
+    <string name="recently_played">Recently Played</string>
+    <string name="most_played">Most Played</string>
+    <string name="recently_added">Recently Added</string>
+    <string name="songs_and_albums_format">%1$d songs • %2$d albums</string>
+    <string name="songs_count_format">%1$d songs</string>
+    <string name="artist_and_songs_format">%1$s • %2$d songs</string>
+    <string name="artist_and_album_format">%1$s • %2$s</string>
+    <string name="db_format">%1$d dB</string>
+    <string name="queue_item_format">%1$d. %2$s - %3$s</string>
+
+    <!-- Empty States -->
+    <string name="no_albums_found">No albums found.</string>
+    <string name="no_artists_found">No artists found.</string>
+    <string name="no_folders_found">No audio folders found.</string>
+    <string name="no_playlists_found">No playlists yet. Tap + to create one.</string>
+    <string name="no_favorites_found">No favorite songs added yet.</string>
+    <string name="no_songs_found">No songs found on device.</string>
+    <string name="no_results_found">No results found for \"%1$s\"</string>
+    <string name="no_song_playing">No song currently playing.</string>
+    <string name="search_prompt">Type to search your music library</string>
+    <string name="search_placeholder">Search songs, artists, albums...</string>
+    <string name="no_playlists_created">No playlists created yet.</string>
+
+    <!-- Action Buttons -->
+    <string name="play_all">Play All</string>
+    <string name="play_album">Play Album</string>
+    <string name="play_folder">Play Folder</string>
+    <string name="play_playlist">Play Playlist</string>
+    <string name="play_favorites">Play Favorites</string>
+    <string name="grant_permission">Grant Permission</string>
+    <string name="create">Create</string>
+    <string name="cancel">Cancel</string>
+    <string name="apply">Apply</string>
+    <string name="close">Close</string>
+    <string name="delete">Delete</string>
+    <string name="save">Save</string>
+    <string name="refresh">Refresh</string>
+    <string name="sort">Sort</string>
+    <string name="back">Back</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="play">Play</string>
+    <string name="pause">Pause</string>
+    <string name="shuffle">Shuffle</string>
+    <string name="repeat">Repeat</string>
+    <string name="add_to_playlist">Add to Playlist</string>
+    <string name="song_info">Song Info</string>
+    <string name="rename">Rename</string>
+    <string name="from_your_library">From your music library</string>
+
+    <!-- Sort Options -->
+    <string name="sort_songs">Sort Songs</string>
+    <string name="sort_by">Sort By</string>
+    <string name="direction">Direction</string>
+    <string name="sort_title">Title</string>
+    <string name="sort_artist">Artist</string>
+    <string name="sort_album">Album</string>
+    <string name="sort_duration">Duration</string>
+    <string name="sort_date_added">Date Added</string>
+    <string name="sort_year">Year</string>
+    <string name="sort_ascending">Ascending</string>
+    <string name="sort_descending">Descending</string>
+
+    <!-- Dialogs -->
+    <string name="new_playlist">New Playlist</string>
+    <string name="playlist_name">Playlist Name</string>
+    <string name="playlist_name_hint">Enter playlist name</string>
+    <string name="select_playlist">Select Playlist</string>
+    <string name="rename_song">Rename Song</string>
+    <string name="delete_song">Delete Song</string>
+    <string name="delete_song_confirm">Are you sure you want to delete \"%1$s\"?</string>
+    <string name="delete_playlist">Delete Playlist</string>
+    <string name="delete_playlist_confirm">Are you sure you want to delete playlist \"%1$s\"?</string>
+    <string name="sleep_timer">Sleep Timer</string>
+    <string name="sleep_timer_active">Timer active: %1$s remaining</string>
+    <string name="select_duration">Select countdown duration:</string>
+    <string name="cancel_timer">Cancel Timer</string>
+    <string name="minutes_format">%1$d minutes</string>
+
+    <!-- Content Descriptions -->
+    <string name="cd_play_pause">Play or Pause</string>
+    <string name="cd_skip_next">Skip Next</string>
+    <string name="cd_skip_previous">Skip Previous</string>
+    <string name="cd_shuffle">Shuffle</string>
+    <string name="cd_repeat">Repeat</string>
+    <string name="cd_favorite">Favorite</string>
+    <string name="cd_queue">Playback Queue</string>
+    <string name="cd_equalizer">Audio Equalizer</string>
+    <string name="cd_sleep_timer">Sleep Timer</string>
+    <string name="cd_album_art">Album Artwork</string>
+    <string name="cd_clear_search">Clear Search</string>
+    <string name="cd_more_options">More Options</string>
+
+    <!-- Permissions -->
+    <string name="permission_title">Audio Permission Required</string>
+    <string name="permission_desc">Melora needs permission to access audio files on your device to display and play your music library.</string>
+    <string name="permission_welcome_chip">WELCOME TO MELORA</string>
+    <string name="permission_screen_title">Access Your Music Library</string>
+    <string name="permission_screen_subtitle">To organize, index, and play your music, Melora needs access to the audio tracks stored on this device.</string>
+    <string name="permission_feature_local_title">Lossless Local Playback</string>
+    <string name="permission_feature_local_desc">Play MP3, FLAC, AAC, WAV and OGG with full Equalizer and DSP support.</string>
+    <string name="permission_feature_library_title">Smart Audio Library</string>
+    <string name="permission_feature_library_desc">Instant indexing by Artists, Albums, Folders, and embedded album art.</string>
+    <string name="permission_feature_privacy_title">100% Offline &amp; Private</string>
+    <string name="permission_feature_privacy_desc">Your files never leave your device. Zero background analytics or cloud uploads.</string>
+    <string name="permission_open_settings">Open App Settings</string>
+    <string name="permission_grant_button">Allow Audio Access</string>
+
+    <!-- Settings -->
+    <string name="app_theme">App Theme</string>
+    <string name="theme_system">System Default</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="playback_behavior">Playback &amp; Behavior</string>
+    <string name="resume_previous_session">Resume Previous Session</string>
+    <string name="data_history">Data &amp; History</string>
+    <string name="clear_playback_history">Clear Playback History</string>
+    <string name="about">About</string>
+    <string name="app_version">Melora Music Player v1.0.0</string>
+    <string name="target_api">Target API 36 (Android 16) • Min API 26 (Android 8.0)</string>
+
+    <!-- Equalizer -->
+    <string name="eq_not_available">Equalizer is not available for the current audio session.</string>
+    <string name="presets">Presets</string>
+    <string name="frequency_bands">Frequency Bands</string>
+    <string name="audio_effects">Audio Effects</string>
+    <string name="bass_boost">Bass Boost (%1$d%%)</string>
+    <string name="virtualizer">Virtualizer (%1$d%%)</string>
+    <string name="status_on">On</string>
+    <string name="status_off">Off</string>
+
+    <!-- Queue & Info -->
+    <string name="current_queue">Current Queue (%1$d)</string>
+    <string name="info_title">Title: %1$s</string>
+    <string name="info_artist">Artist: %1$s</string>
+    <string name="info_album">Album: %1$s</string>
+    <string name="info_duration">Duration: %1$s</string>
+    <string name="info_size">File Size: %1$s</string>
+    <string name="info_path">Path: %1$s</string>
+    <string name="info_label_title">Title</string>
+    <string name="info_label_artist">Artist</string>
+    <string name="info_label_album">Album</string>
+    <string name="info_label_duration">Duration</string>
+    <string name="info_label_size">File Size</string>
+    <string name="info_label_path">File Path</string>
+
+    <!-- Rich Actions -->
+    <string name="play_next">Play Next</string>
+    <string name="add_to_queue">Add to Queue</string>
+    <string name="share">Share</string>
+    <string name="speed_and_pitch">Playback Speed</string>
+    <string name="normal_speed">Normal (1.0x)</string>
+    <string name="rewind_10">Rewind 10s</string>
+    <string name="forward_10">Forward 10s</string>
+
+    <!-- Home Screen Section Strings -->
+    <string name="greeting_morning">Good morning</string>
+    <string name="greeting_afternoon">Good afternoon</string>
+    <string name="greeting_evening">Good evening</string>
+    <string name="greeting_night">Good night</string>
+    <string name="home_subtitle">Your music, your way.</string>
+    <string name="pick_up_where_left_off">Pick up where you left off</string>
+    <string name="your_liked_songs">Your liked songs</string>
+    <string name="shuffle_all">Shuffle All</string>
+    <string name="local_files">Local Files</string>
+    <string name="continue_listening">Continue listening</string>
+    <string name="see_all">See all</string>
+    <string name="your_last_played_track">Your last played track</string>
+    <string name="your_top_track">Your top track</string>
+    <string name="newly_added_track">Newly added track</string>
+    <string name="quick_access">Quick access</string>
+
+    <!-- Top Tabs & Song Actions -->
+    <string name="tab_all_songs">All songs</string>
+    <string name="tab_favorites">Favorites</string>
+    <string name="tab_recently_added">Recently added</string>
+    <string name="play_now">Play now</string>
+    <string name="view_album">View album</string>
+    <string name="view_artist">View artist</string>
+    <string name="set_as_ringtone">Set as ringtone</string>
+    <string name="ringtone_set_success">Ringtone set successfully</string>
+    <string name="multi_select">Multi-select</string>
+    <string name="selected_count">%1$d selected</string>
+    <string name="select_all">Select all</string>
+    <string name="clear_selection">Clear</string>
+
+    <!-- Albums Screen -->
+    <string name="search_albums">Search albums</string>
+    <string name="tracks_count">%1$d songs</string>
+    <string name="album_info">Album info</string>
+
+    <!-- Playlists Screen -->
+    <string name="your_playlists">Your playlists</string>
+    <string name="builtin_playlist">Built-in playlist</string>
+    <string name="your_playlist">Your playlist</string>
+    <string name="duplicate_playlist">Duplicate</string>
+    <string name="add_songs">Add Songs</string>
+    <string name="playlist_late_night">Late Night</string>
+    <string name="playlist_focus_time">Focus Time</string>
+
+    <!-- Settings Categorized Sections -->
+    <string name="settings_appearance">Appearance</string>
+    <string name="settings_appearance_desc">Theme, colors, artwork and layout</string>
+    <string name="settings_playback">Playback</string>
+    <string name="settings_playback_desc">Resume previous listening session</string>
+    <string name="settings_audio">Audio</string>
+    <string name="settings_audio_desc">Equalizer, balance and audio effects</string>
+    <string name="settings_music_library">Music Library</string>
+    <string name="settings_music_library_desc">Scan folders, excluded files and sorting</string>
+    <string name="settings_data_history">Data &amp; History</string>
+    <string name="settings_data_history_desc">Listening history, play counts and cleanup</string>
+    <string name="settings_notifications">Notifications</string>
+    <string name="settings_notifications_desc">Playback notifications and controls</string>
+    <string name="settings_privacy">Privacy &amp; Permissions</string>
+    <string name="settings_privacy_desc">Music access and app permissions</string>
+    <string name="settings_about">About</string>
+    <string name="settings_about_desc">Version, licenses, help and feedback</string>
+    <string name="settings_subtitle">Personalize your listening experience.</string>
+
+    <!-- Player Screen Dialogs & Features -->
+    <string name="lyrics">Lyrics</string>
+    <string name="no_lyrics_found">No lyrics available for this song.</string>
+    <string name="playback_speed">Playback Speed</string>
+    <string name="playback_speed_normal">Normal</string>
+    <string name="current_speed">Current Speed</string>
+    <string name="audio_output">Audio Output</string>
+
+    <!-- Timer Options -->
+    <string name="timer_turn_off">Turn off</string>
+    <string name="timer_stop_after_track">Stop after this track</string>
+    <string name="timer_15_min">15 min later</string>
+    <string name="timer_30_min">30 min later</string>
+    <string name="timer_45_min">45 min later</string>
+    <string name="timer_60_min">60 min later</string>
+    <string name="timer_custom">Custom</string>
+
+    <!-- Widget Strings -->
+    <string name="widget_name">Melora Music Player</string>
+    <string name="widget_description">Control playback and view currently playing song from your home screen.</string>
+
+    <!-- Additional Options & Volume -->
+    <string name="add_to_favorites">Add to Favorites</string>
+    <string name="remove_from_favorites">Remove from Favorites</string>
+    <string name="volume">Volume</string>
+</resources>

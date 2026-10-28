@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="splash_background">#101714</color>
+    <color name="splash_icon_background">#101714</color>
+    <color name="forest_background">#101714</color>
+    <color name="forest_surface">#1C2922</color>
+    <color name="forest_mint">#72D6A0</color>
+    <color name="melora_primary">#72D6A0</color>
+    <color name="melora_cyan">#8AE8B6</color>
+    <color name="dark_background">#101714</color>
+    <color name="dark_surface">#1C2922</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+</resources>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Musical Note Emblem in Pure Solid White for System Material You Tinting -->
+    <path
+        android:pathData="M44,36 L68,30 L68,37 L44,43 Z
+                          M44,38 L44,65 C42.2,63.8 39.5,63 36.5,63 C30.7,63 26,66.8 26,71.5 C26,76.2 30.7,80 36.5,80 C42.3,80 47,76.2 47,71.5 L47,45 L65,40.5 L65,59 C63.2,57.8 60.5,57 57.5,57 C51.7,57 47,60.8 47,65.5 C47,70.2 51.7,74 57.5,74 C63.3,74 68,70.2 68,65.5 L68,30 Z"
+        android:fillColor="#FFFFFFFF" />
+
+    <!-- Equalizer Side Bars -->
+    <path
+        android:pathData="M75,44 L75,62"
+        android:strokeWidth="3.5"
+        android:strokeLineCap="round"
+        android:strokeColor="#FFFFFFFF" />
+
+    <path
+        android:pathData="M81,40 L81,66"
+        android:strokeWidth="3.5"
+        android:strokeLineCap="round"
+        android:strokeColor="#FFFFFFFF" />
+
+    <path
+        android:pathData="M87,48 L87,58"
+        android:strokeWidth="3.5"
+        android:strokeLineCap="round"
+        android:strokeColor="#FFFFFFFF" />
+
+    <!-- Accent Dot -->
+    <path
+        android:pathData="M23,55 A3,3 0 1 0 23,49 A3,3 0 1 0 23,55"
+        android:fillColor="#FFFFFFFF" />
+
+</vector>
