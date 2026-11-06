@@ -20,12 +20,19 @@ class PlaylistRepositoryImpl @Inject constructor(
 ) : PlaylistRepository {
 
     override fun getAllPlaylists(): Flow<List<Playlist>> {
-        return playlistDao.getAllPlaylists().map { entities ->
-            entities.map { entity ->
+        return combine(
+            playlistDao.getAllPlaylistsWithSongCount(),
+            musicRepository.getAllSongs()
+        ) { playlistsWithInfo, allSongs ->
+            val songMap = allSongs.associateBy { it.id }
+            playlistsWithInfo.map { item ->
+                val artworkUri = item.firstSongId?.let { songMap[it]?.artworkUri }
                 Playlist(
-                    id = entity.id,
-                    name = entity.name,
-                    createdAt = entity.createdAt
+                    id = item.id,
+                    name = item.name,
+                    createdAt = item.createdAt,
+                    songCount = item.songCount,
+                    artworkUri = artworkUri
                 )
             }
         }
@@ -43,11 +50,12 @@ class PlaylistRepositoryImpl @Inject constructor(
     }
 
     override suspend fun addSongToPlaylist(playlistId: Long, songId: Long) {
+        val nextIndex = playlistDao.getNextOrderIndex(playlistId)
         playlistDao.insertPlaylistSong(
             PlaylistSongEntity(
                 playlistId = playlistId,
                 songId = songId,
-                orderIndex = System.currentTimeMillis().toInt()
+                orderIndex = nextIndex
             )
         )
     }

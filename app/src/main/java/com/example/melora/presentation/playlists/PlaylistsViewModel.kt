@@ -58,7 +58,7 @@ class PlaylistsViewModel @Inject constructor(
     private val setShuffleUseCase: SetShuffleUseCase
 ) : ViewModel() {
 
-    private val _selectedPlaylist = MutableStateFlow<Playlist?>(null)
+    private val _selectedPlaylistId = MutableStateFlow<Long?>(null)
     private val _isGridView = MutableStateFlow(true)
     private val _isLoading = MutableStateFlow(false)
     private val _errorMessage = MutableStateFlow<String?>(null)
@@ -75,10 +75,10 @@ class PlaylistsViewModel @Inject constructor(
         initialValue = emptyList()
     )
 
-    private val selectedPlaylistSongsFlow: StateFlow<List<Song>> = _selectedPlaylist
-        .flatMapLatest { playlist ->
-            if (playlist == null) flowOf(emptyList())
-            else getPlaylistSongsUseCase(playlist.id)
+    private val selectedPlaylistSongsFlow: StateFlow<List<Song>> = _selectedPlaylistId
+        .flatMapLatest { playlistId ->
+            if (playlistId == null) flowOf(emptyList())
+            else getPlaylistSongsUseCase(playlistId)
         }
         .stateIn(
             scope = viewModelScope,
@@ -90,7 +90,7 @@ class PlaylistsViewModel @Inject constructor(
         playlistsFlow,
         _isGridView,
         allLibrarySongsFlow,
-        _selectedPlaylist,
+        _selectedPlaylistId,
         selectedPlaylistSongsFlow,
         _isLoading,
         _errorMessage
@@ -100,11 +100,13 @@ class PlaylistsViewModel @Inject constructor(
         val isGrid = params[1] as Boolean
         @Suppress("UNCHECKED_CAST")
         val allSongs = params[2] as List<Song>
-        val selected = params[3] as Playlist?
+        val selectedId = params[3] as Long?
         @Suppress("UNCHECKED_CAST")
         val songs = params[4] as List<Song>
         val loading = params[5] as Boolean
         val error = params[6] as String?
+
+        val selected = allPlaylists.firstOrNull { it.id == selectedId }
 
         PlaylistsUiState(
             playlists = allPlaylists,
@@ -126,11 +128,11 @@ class PlaylistsViewModel @Inject constructor(
     }
 
     fun selectPlaylist(playlist: Playlist) {
-        _selectedPlaylist.value = playlist
+        _selectedPlaylistId.value = playlist.id
     }
 
     fun clearSelectedPlaylist() {
-        _selectedPlaylist.value = null
+        _selectedPlaylistId.value = null
     }
 
     fun createPlaylist(name: String) {
@@ -147,7 +149,7 @@ class PlaylistsViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 deletePlaylistUseCase(playlistId)
-                if (_selectedPlaylist.value?.id == playlistId) {
+                if (_selectedPlaylistId.value == playlistId) {
                     clearSelectedPlaylist()
                 }
             } catch (e: Exception) {

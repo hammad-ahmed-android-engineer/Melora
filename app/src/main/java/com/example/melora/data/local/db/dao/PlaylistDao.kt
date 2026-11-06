@@ -8,10 +8,35 @@ import com.example.melora.data.local.db.entity.PlaylistEntity
 import com.example.melora.data.local.db.entity.PlaylistSongEntity
 import kotlinx.coroutines.flow.Flow
 
+data class PlaylistWithSongCount(
+    val id: Long,
+    val name: String,
+    val createdAt: Long,
+    val songCount: Int,
+    val firstSongId: Long?
+)
+
 @Dao
 interface PlaylistDao {
     @Query("SELECT * FROM playlists ORDER BY createdAt DESC")
     fun getAllPlaylists(): Flow<List<PlaylistEntity>>
+
+    @Query("""
+        SELECT 
+            p.id AS id,
+            p.name AS name,
+            p.createdAt AS createdAt,
+            COUNT(ps.songId) AS songCount,
+            (SELECT songId FROM playlist_songs WHERE playlistId = p.id ORDER BY orderIndex ASC LIMIT 1) AS firstSongId
+        FROM playlists p
+        LEFT JOIN playlist_songs ps ON p.id = ps.playlistId
+        GROUP BY p.id, p.name, p.createdAt
+        ORDER BY p.createdAt DESC
+    """)
+    fun getAllPlaylistsWithSongCount(): Flow<List<PlaylistWithSongCount>>
+
+    @Query("SELECT COALESCE(MAX(orderIndex), -1) + 1 FROM playlist_songs WHERE playlistId = :playlistId")
+    suspend fun getNextOrderIndex(playlistId: Long): Int
 
     @Query("SELECT songId FROM playlist_songs WHERE playlistId = :playlistId ORDER BY orderIndex ASC")
     fun getPlaylistSongIds(playlistId: Long): Flow<List<Long>>
